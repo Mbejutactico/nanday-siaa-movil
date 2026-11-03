@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/APInanday">
+
+    <!--
+        POOL DE CONEXIONES: hasta 20 conexiones reutilizables a la misma base del sistema web,
+        en vez de abrir una nueva por cada pedido de la app. Requisito: postgresql-42.7.10.jar en
+        lib/ de Tomcat (el mismo que usa el sistema web). Si el pool no se puede usar, la API se
+        conecta directamente con los datos de conexion/conexion.java.
+        Si la base está en otra PC o el usuario tiene otra contraseña, cambiar url y password.
+    -->
+    <Resource name="jdbc/nanday" auth="Container" type="javax.sql.DataSource"
+              driverClassName="org.postgresql.Driver"
+              url="jdbc:postgresql://localhost:5432/proyecto_final"
+              username="nanday_app" password="Nanday.App-2026"
+              maxTotal="20" maxIdle="5" minIdle="1" maxWaitMillis="10000"
+              validationQuery="SELECT 1" testOnBorrow="true"
+              removeAbandonedOnBorrow="true" removeAbandonedTimeout="60"/>
+</Context>

@@ -1,0 +1,13 @@
+**/target/
+**/nbproject/private/
+nanday_movil/build/
+nanday_movil/.dart_tool/
+nanday_movil/.flutter-plugins
+nanday_movil/.flutter-plugins-dependencies
+nanday_movil/android/local.properties
+nanday_movil/android/key.properties
+*.jks
+*.keystore
+*.iml
+.idea/
+*.zip

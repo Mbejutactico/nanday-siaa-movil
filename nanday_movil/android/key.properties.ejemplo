@@ -1,0 +1,8 @@
+# Copie este archivo como "key.properties" (en esta misma carpeta android/) y complete sus datos.
+# La clave se crea una sola vez con:
+#   keytool -genkey -v -keystore ~/nanday-release.jks -keyalg RSA -keysize 2048 -validity 10000 -alias nanday
+# Guarde el .jks y las contraseñas: sin ellos no se puede actualizar la app instalada.
+storePassword=SU_CLAVE
+keyPassword=SU_CLAVE
+keyAlias=nanday
+storeFile=/home/giovanni/nanday-release.jks

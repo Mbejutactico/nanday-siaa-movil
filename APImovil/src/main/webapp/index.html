@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="UTF-8"><title>APInanday - Ñanday</title></head>
+<body style="font-family:sans-serif;padding:30px;line-height:1.5">
+    <h2>APInanday - Ñanday SIAA</h2>
+    <p>La API está funcionando. Todos los servicios (salvo el login) exigen la cabecera
+       <code>Authorization: Bearer &lt;token&gt;</code>.</p>
+    <ul>
+        <li><code>POST /LoginServlet</code> (email, password) &rarr; token &nbsp;·&nbsp; <code>DELETE /LoginServlet</code> cierra la sesión</li>
+        <li><code>POST /c/movil</code> tipo = sesion, centros, almacenes, centrosCosto, insumos, stock, otsConPendientes, ocPendientes, proveedores, insumosCatalogo...</li>
+        <li><code>POST /c/inventarioControlador</code> tipo = stockAlmacen, kardex, registrarConteo, pendientesSalida, emitirSalida, listarTransferencias, crearTransferencia, anularTransferencia, alertasMinimo...</li>
+        <li><code>POST /c/otControlador</code> tipo = listar, detalle, almacenesConStock, suministrar, quitarSuministro, finalizar, reabrir...</li>
+        <li><code>POST /c/ocControlador</code> tipo = obtenerDetalleRecepcion, procesarRecepcion...</li>
+        <li><code>POST /c/activosControlador</code> tipo = resumen, listar, detalle, registrarMovimiento</li>
+        <li><code>POST /c/activosMovControlador</code> tipo = activos, crearSolicitud, listarSolicitudes, detalleSolicitud, aprobar, rechazar, enRecepcion, recibir, rechazarRecepcion, anularSalida</li>
+        <li><code>POST /c/dashboardcontrolador</code> tipo = resumenOT</li>
+        <li><code>POST /PerfilServlet</code> tipo = ActualizarDatos, CambiarPassword, ActualizarFoto &nbsp;·&nbsp; <code>GET /FotoServlet?archivo=perfil_N.jpg</code></li>
+        <li>Anteriores: <code>/ProveedorServlet</code>, <code>/InsumoServlet</code>, <code>/UnidadServlet</code></li>
+    </ul>
+</body>
+</html>
